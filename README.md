@@ -63,7 +63,7 @@ Once the building and installation is done, follow those steps:
 
      ~~~ bash
      $ pg_autoctl create monitor --pgdata /path/to/pgdata     \
-                                 --nodename `hostname --fqdn`
+                                 --nodename `pg_autoctl show ipaddr`
      ~~~
 
      Once this command is done, you should have a running PostgreSQL
@@ -82,7 +82,7 @@ Once the building and installation is done, follow those steps:
 
      ~~~ bash
      $ pg_autoctl create postgres --pgdata /path/to/pgdata     \
-                                  --nodename `hostname --fqdn`  \
+                                  --nodename `pg_autoctl show ipaddr`  \
                                   --monitor postgres://autoctl_node@host/pg_auto_failover
      ~~~
 
@@ -125,7 +125,7 @@ Once the building and installation is done, follow those steps:
 
      ~~~ bash
      $ pg_autoctl create postgres --pgdata /path/to/pgdata     \
-                                  --nodename `hostname -fqdn`  \
+                                  --nodename `pg_autoctl show ipaddr`  \
                                   --monitor postgres://autoctl_node@host/pg_auto_failover
      ~~~
 
